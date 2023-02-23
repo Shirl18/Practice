@@ -1,9 +1,9 @@
-FROM python
+FROM python:3.8-slim-buster
 
 WORKDIR /app
 
 COPY . .
 
-RUN pip install -R requirements.txt
+RUN pip install -r requirements.txt
 
-CMD ["python", "-m", "flask", "run", "__host=0.0.0.0"]
+CMD ["python", "-m", "flask", "run", "--host=0.0.0.0"]
