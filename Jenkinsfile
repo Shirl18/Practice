@@ -6,7 +6,7 @@ pipeline {
         stage('Login and Push'){
             steps {
                 script{
-                    withDockerRegistry(credentialsId: 'shirlt18') {
+                    withDockerRegistry(credentialsId: 'shirl18') {
                         docker.build('shirlteya/flask').push('latest')
                     }
                 }
